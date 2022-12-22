@@ -6,12 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="main.js" type="module" async></script>
   <title>Document</title>
+  <style>
+    body {
+      min-height: 3000px;
+    }
+
+    my-component, my-sub-component {
+      display: block;
+      border: 1px solid #000;
+      min-height: 1rem;
+    }
+
+    my-component my-sub-component {
+      border-color: red;
+    }
+  </style>
 </head>
 <body>
+  <my-event-bus>
+  </my-event-bus>
 
   <my-component>
-    <my-sub-component></my-sub-component>
+    <p class="counter"></p>
+    <button type="button">clear</button>
+
+    <my-sub-component>
+      <button type="button">click</button>
+    </my-sub-component>
   </my-component>
 
+
+  <form action="">
+
+    <validated-input>
+      <input id="pw-field" type="password" is="my-password" required min="8" must-equal="#confirm-pw">
+      <error-messages>
+
+      </error-messages>
+    </validated-input>
+    <input id="confirm-pw" type="password" is="my-password" required min="8" must-equal="#pw-field">
+
+  </form>
 </body>
 </html>
