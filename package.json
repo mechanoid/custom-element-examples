@@ -16,5 +16,7 @@
   },
   "bin": {
     "custom-element-example": "bin/custom-element-example.js"
-  }
+  },
+  "type": "module",
+  "module": "index.js"
 }
