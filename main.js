@@ -67,6 +67,16 @@ class MySubComponent extends HTMLElement {
   }
 }
 
+class MyErrorMessages extends HTMLElement {
+  add() {
+
+  }
+
+  remove() {
+
+  }
+}
+
 class ValidatedInput extends HTMLElement {
   constructor() {
     super()
@@ -74,6 +84,9 @@ class ValidatedInput extends HTMLElement {
 
   connectedCallback() {
     this.insertAdjacentHTML(`<my-error-messages />`)
+    this.errorMessages = document.querySelector('my-error-messages')
+
+    this.errorMessages.add(message)
   }
 }
 
